@@ -1,0 +1,35 @@
+/* Custom styles for the portfolio */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
+}
+
+/* Focus styles */
+.focus-visible {
+  @apply focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none;
+}
+
+/* Selection styles */
+::selection {
+  background: hsl(var(--primary) / 0.2);
+  color: hsl(var(--primary-foreground));
+}
