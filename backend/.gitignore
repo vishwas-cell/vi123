@@ -1,0 +1,28 @@
+# Node Modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables (DO NOT COMMIT)
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dist & Build
+dist/
+build/
+
+# Database
+*.db
+*.sqlite
