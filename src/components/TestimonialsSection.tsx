@@ -52,7 +52,7 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimoni
       animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       whileHover={{ y: -8, scale: 1.02 }}
-      className="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/2 border border-white/10 backdrop-blur-md hover:border-primary/50 transition-all duration-500 h-full flex flex-col"
+      className="group p-8 rounded-2xl bg-gradient-to-br from-slate-800/40 to-slate-900/40 border border-slate-700/50 backdrop-blur-md hover:border-primary/50 transition-all duration-500 h-full flex flex-col"
     >
       {/* Rating */}
       <div className="flex gap-1 mb-4">
@@ -69,7 +69,7 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimoni
       </div>
 
       {/* Text */}
-      <p className="font-body text-white mb-6 leading-relaxed flex-grow text-sm sm:text-base">
+      <p className="font-body text-gray-100 mb-6 leading-relaxed flex-grow text-sm sm:text-base">
         "{testimonial.text}"
       </p>
 
@@ -84,7 +84,7 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimoni
           {testimonial.image}
         </div>
         <div>
-          <h4 className="font-display font-bold text-white text-sm">
+          <h4 className="font-display font-bold text-gray-50 text-sm">
             {testimonial.name}
           </h4>
           <p className="font-body text-xs text-muted-foreground">
