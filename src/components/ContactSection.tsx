@@ -104,10 +104,10 @@ const ContactSection = () => {
           <p className="text-xs font-body tracking-[0.3em] uppercase text-primary mb-4 font-semibold">
             Let's Connect
           </p>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-50 mb-6">
             Get In <span className="text-gradient">Touch</span>
           </h2>
-          <p className="font-body text-white text-lg max-w-2xl mx-auto">
+            <p className="font-body text-gray-100 text-lg max-w-2xl mx-auto">
             Have a project in mind or want to discuss opportunities? I'd love to hear from you!
           </p>
         </motion.div>
@@ -123,7 +123,7 @@ const ContactSection = () => {
             <div>
               <motion.p
                 variants={itemVariants}
-                className="font-body text-white text-lg mb-8 leading-relaxed"
+                className="font-body text-gray-100 text-lg mb-8 leading-relaxed"
               >
                 Whether you have an exciting project, want to collaborate, or just want to say hello — I'm here and ready to help make your ideas a reality.
               </motion.p>
@@ -136,13 +136,13 @@ const ContactSection = () => {
                 className="group inline-flex items-center gap-3 mb-12"
               >
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Mail size={24} className="text-white" />
+                  <Mail size={24} className="text-gray-900" />
                 </div>
                 <div>
                   <p className="font-body text-xs text-muted-foreground uppercase tracking-widest">
                     Email Me
                   </p>
-                  <p className="font-display text-xl font-bold text-white group-hover:text-primary transition-colors duration-300">
+                  <p className="font-display text-xl font-bold text-gray-50 group-hover:text-primary transition-colors duration-300">
                     vishwasnb@gmail.com
                   </p>
                 </div>
@@ -151,7 +151,7 @@ const ContactSection = () => {
 
             {/* Social links */}
             <motion.div variants={itemVariants} className="space-y-4">
-              <p className="font-body text-xs text-white uppercase tracking-widest font-semibold">
+              <p className="font-body text-xs text-gray-100 uppercase tracking-widest font-semibold">
                 Connect On Social
               </p>
               <div className="flex gap-3">
@@ -163,10 +163,10 @@ const ContactSection = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, y: -3 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group relative p-4 rounded-xl bg-white/10 border border-white/20 hover:bg-gradient-to-br hover:from-primary hover:to-accent hover:border-transparent transition-all duration-300"
+                    className="group relative p-4 rounded-xl bg-slate-700/40 border border-slate-600/50 hover:bg-gradient-to-br hover:from-primary hover:to-accent hover:border-transparent transition-all duration-300"
                   >
-                    <link.icon size={20} className="text-white relative z-10" />
-                    <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white text-black px-2 py-1 rounded text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <link.icon size={20} className="text-gray-100 relative z-10" />
+                    <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-slate-800 text-gray-100 px-2 py-1 rounded text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {link.label}
                     </span>
                   </motion.a>
@@ -200,7 +200,7 @@ const ContactSection = () => {
                     if (errors.name) setErrors({ ...errors, name: "" });
                   }}
                   disabled={isSubmitting}
-                  className={`w-full px-4 py-3 bg-slate-800/60 border-b-2 border-primary/30 text-white placeholder:text-white/60 focus:border-primary focus:outline-none transition-all duration-300 font-body backdrop-blur-sm rounded-lg ${
+                  className={`w-full px-4 py-3 bg-slate-800/60 border-b-2 border-primary/30 text-gray-100 placeholder:text-gray-400 focus:border-primary focus:outline-none transition-all duration-300 font-body backdrop-blur-sm rounded-lg ${
                     errors.name ? "border-red-500" : ""
                   }`}
                   placeholder="Vishwas"
@@ -223,7 +223,7 @@ const ContactSection = () => {
                     if (errors.email) setErrors({ ...errors, email: "" });
                   }}
                   disabled={isSubmitting}
-                  className={`w-full px-4 py-3 bg-slate-800/60 border-b-2 border-primary/30 text-white placeholder:text-white/60 focus:border-primary focus:outline-none transition-all duration-300 font-body backdrop-blur-sm rounded-lg ${
+                  className={`w-full px-4 py-3 bg-slate-800/60 border-b-2 border-primary/30 text-gray-100 placeholder:text-gray-400 focus:border-primary focus:outline-none transition-all duration-300 font-body backdrop-blur-sm rounded-lg ${
                     errors.email ? "border-red-500" : ""
                   }`}
                   placeholder="your@email.com"
@@ -246,7 +246,7 @@ const ContactSection = () => {
                   }}
                   disabled={isSubmitting}
                   rows={5}
-                  className={`w-full px-4 py-3 bg-slate-800/60 border-b-2 border-primary/30 text-white placeholder:text-white/60 focus:border-primary focus:outline-none transition-all duration-300 font-body backdrop-blur-sm rounded-lg resize-none ${
+                  className={`w-full px-4 py-3 bg-slate-800/60 border-b-2 border-primary/30 text-gray-100 placeholder:text-gray-400 focus:border-primary focus:outline-none transition-all duration-300 font-body backdrop-blur-sm rounded-lg resize-none ${
                     errors.message ? "border-red-500" : ""
                   }`}
                   placeholder="Tell me about your project..."

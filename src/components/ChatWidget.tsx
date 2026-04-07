@@ -220,7 +220,7 @@ const ChatWidget = () => {
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="mt-4 px-3 py-1 bg-gradient-to-r from-pink-400 to-purple-400 text-white text-xs font-bold rounded-full"
+        className="mt-4 px-3 py-1 bg-gradient-to-r from-pink-400 to-purple-400 text-gray-900 text-xs font-bold rounded-full"
       >
         Vera ✨
       </motion.div>
@@ -272,14 +272,14 @@ const ChatWidget = () => {
             } rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800`}
           >
             {/* Header with Character */}
-            <motion.div className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 p-4 text-white flex items-center justify-between flex-shrink-0">
+            <motion.div className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 p-4 text-gray-900 flex items-center justify-between flex-shrink-0">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-white/30 flex items-center justify-center text-lg">
                   ✨
                 </div>
                 <div>
                   <h3 className="font-bold text-sm">Vera AI Assistant</h3>
-                  <p className="text-xs text-white/80">Always here to help!</p>
+                  <p className="text-xs text-gray-800">Always here to help!</p>
                 </div>
               </div>
               <div className="flex gap-2">
@@ -287,7 +287,7 @@ const ChatWidget = () => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setIsMinimized(!isMinimized)}
-                  className="p-1 hover:bg-white/20 rounded-lg transition-colors"
+                  className="p-1 hover:bg-gray-600 rounded-lg transition-colors"
                 >
                   <Minimize2 size={18} />
                 </motion.button>
@@ -298,7 +298,7 @@ const ChatWidget = () => {
                     setIsOpen(false);
                     setAnimate(true);
                   }}
-                  className="p-1 hover:bg-white/20 rounded-lg transition-colors"
+                  className="p-1 hover:bg-gray-600 rounded-lg transition-colors"
                 >
                   <X size={18} />
                 </motion.button>
@@ -327,15 +327,15 @@ const ChatWidget = () => {
                         whileHover={{ scale: 1.02 }}
                         className={`max-w-xs px-4 py-2 rounded-2xl text-sm leading-relaxed ${
                           message.sender === "user"
-                            ? "bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-br-none"
-                            : "bg-white dark:bg-slate-700 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-600 rounded-bl-none"
+                            ? "bg-gradient-to-r from-pink-500 to-purple-500 text-gray-900 rounded-br-none"
+                            : "bg-slate-700/60 text-gray-100 border border-slate-600 rounded-bl-none"
                         }`}
                       >
                         {message.text}
                         <div
                           className={`text-xs mt-1 ${
                             message.sender === "user"
-                              ? "text-white/70"
+                              ? "text-gray-800/70"
                               : "text-gray-600 dark:text-gray-400"
                           }`}
                         >
@@ -354,7 +354,7 @@ const ChatWidget = () => {
                       animate={{ opacity: 1 }}
                       className="flex justify-start"
                     >
-                      <div className="bg-white dark:bg-slate-700 px-4 py-2 rounded-2xl rounded-bl-none border border-gray-200 dark:border-gray-600 flex gap-2">
+                      <div className="bg-slate-700/60 px-4 py-2 rounded-2xl rounded-bl-none border border-slate-600 flex gap-2">
                         <motion.div
                           animate={{ scale: [1, 1.2, 1] }}
                           transition={{ duration: 0.6, repeat: Infinity }}
@@ -380,7 +380,7 @@ const ChatWidget = () => {
                 {/* Input Form */}
                 <motion.form
                   onSubmit={handleSendMessage}
-                  className="p-4 border-t border-gray-200 dark:border-gray-600 bg-white dark:bg-slate-900 flex-shrink-0"
+                  className="p-4 border-t border-slate-600 bg-slate-900/60 flex-shrink-0"
                 >
                   <div className="flex gap-2">
                     <input
@@ -389,14 +389,14 @@ const ChatWidget = () => {
                       onChange={(e) => setInput(e.target.value)}
                       placeholder="Ask Vera anything..."
                       disabled={isLoading}
-                      className="flex-1 px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:outline-none focus:border-purple-500 transition-colors"
+                      className="flex-1 px-4 py-2 rounded-full border border-slate-600 bg-slate-800 text-gray-100 focus:outline-none focus:border-purple-500 transition-colors"
                     />
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       type="submit"
                       disabled={isLoading || !input.trim()}
-                      className="p-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="p-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-gray-900 hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isLoading ? (
                         <Loader2 size={20} className="animate-spin" />

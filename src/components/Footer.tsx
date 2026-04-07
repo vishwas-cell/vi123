@@ -50,7 +50,7 @@ const Footer = () => {
           <motion.div variants={itemVariants}>
             <div className="flex items-center gap-2 mb-4">
               <Code2 size={24} className="text-primary" />
-              <h3 className="font-display text-2xl font-bold text-white">
+              <h3 className="font-display text-2xl font-bold text-gray-50">
                 V<span className="text-primary">/</span>B
               </h3>
             </div>
@@ -61,7 +61,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <motion.div variants={itemVariants}>
-            <h4 className="font-display font-bold text-white mb-4">Navigation</h4>
+            <h4 className="font-display font-bold text-gray-50 mb-4">Navigation</h4>
             <ul className="space-y-3">
               {footerLinks.slice(0, 3).map((link) => (
                 <li key={link.label}>
@@ -79,7 +79,7 @@ const Footer = () => {
 
           {/* More Links */}
           <motion.div variants={itemVariants}>
-            <h4 className="font-display font-bold text-white mb-4">More</h4>
+            <h4 className="font-display font-bold text-gray-50 mb-4">More</h4>
             <ul className="space-y-3">
               {footerLinks.slice(3).map((link) => (
                 <li key={link.label}>
@@ -104,7 +104,7 @@ const Footer = () => {
 
           {/* Social Links */}
           <motion.div variants={itemVariants}>
-            <h4 className="font-display font-bold text-white mb-4">Connect</h4>
+            <h4 className="font-display font-bold text-gray-50 mb-4">Connect</h4>
             <div className="flex flex-wrap gap-3">
               {socialLinks.map((link) => {
                 const Icon = link.icon;
@@ -116,7 +116,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.15, y: -3 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`p-3 rounded-lg bg-white/5 border border-white/10 text-white transition-all duration-300 ${link.color} hover:border-transparent hover:bg-gradient-to-r hover:from-primary hover:to-accent`}
+                    className={`p-3 rounded-lg bg-slate-700/40 border border-slate-600/50 text-gray-100 transition-all duration-300 ${link.color} hover:border-transparent hover:bg-gradient-to-r hover:from-primary hover:to-accent`}
                     title={link.label}
                   >
                     <Icon size={18} />
